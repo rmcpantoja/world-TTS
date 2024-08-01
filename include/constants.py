@@ -1,0 +1,1 @@
+worldttsbot_version = "1.0b4"

@@ -1,0 +1,18 @@
+.tmp.driveupload/
+.tmp.driveupload/*
+.tmp.drivedownload/
+__pycache__/
+*.pyc
+*.onnx
+*.json
+*.onnx.json
+bot.json
+espeak-ng/
+espeak-ng/*
+espeak-ng/*.*
+rhvoice/languages
+rhvoice/voices
+ffmpeg.exe
+list - copia.md
+list.md
+.tmp.driveupload/*
