@@ -2,7 +2,11 @@ numpy
 onnxruntime
 sounddevice
 soundfile
-discord.py
+discord.py[voice]
 gdown
 praat-parselmouth
 markdown
+rhvoice_wrapper
+phonemizer
+unidecode
+inflect

@@ -63,7 +63,7 @@ _, _, path, _ = helpers.colab_or_local_running(True, "piper")
 rhpath, _ = helpers.colab_or_local_running(True, "RHVoice")
 # Initialize it:
 forwardtaco = forward_taco_tts.forward(ftpath)
-rhvoice = RHVoice_tts.rhvoice(rhpath+"/..")
+rhvoice = RHVoice_tts.rhvoice(rhpath)
 rhvoices = rhvoice.available_voices()
 with open("list.md", "r", encoding="utf-8") as tmpv:
 	tmpvoices = tmpv.read()

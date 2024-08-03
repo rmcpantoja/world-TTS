@@ -1,12 +1,13 @@
 import os
 from rhvoice_wrapper import TTS
+from rhvoice_wrapper.rhvoice_bindings import _lib_selector
 import datetime
 
 class rhvoice:
 	def __init__(self, path: str):
 		self.path = path
-		self.lib_path=os.path.join(self.path, "RHVoice.dll")
-		self.config_path = os.path.join(self.path, "RHVoice.ini")
+		self.lib_path=os.path.join(self.path, str(_lib_selector(None)))
+		self.config_path = os.path.join(self.path, "RHVoice.ini" if os.name == 'nt' else "RHVoice.conf")
 		self.tts = TTS(
 			threads=1, force_process=False,
 			lib_path=self.lib_path, data_path =self.path, config_path = self.config_path, quiet=True, stream=False

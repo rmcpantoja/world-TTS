@@ -26,11 +26,13 @@ def read_bot_config():
 			"moderation": True,
 			"welcome": True,
 			"local_paths": {
+				"ftvoices_path": os.path.join(os.getcwd(), "ftvoices"),
 				"voices_path": os.path.join(os.getcwd(), "voices"),
 				"rhvoices_path": os.path.join(os.getcwd(), "rhvoice", "voices"),
 				"audio_cache_path": os.path.join(os.getcwd(), "audio_cache")
 			},
 			"colab_paths": {
+				"ftvoices_path": "/content/drive/Othercomputers/My computer/ftvoices",
 				"voices_path": "/content/drive/Othercomputers/My computer/voices",
 				"rhvoices_path": "/content/drive/Othercomputers/My computer/rhvoice/voices",
 				"audio_cache_path": "/content/piper_cache"

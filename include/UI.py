@@ -70,9 +70,9 @@ class Upload_TTS_model(discord.ui.Modal):
 			if not rhvoice_format:
 				await interaction.channel.send(lan.translate(lang, 'El paquete subido no tiene el formato esperado.'))
 				return
-			extract_package.extract_zip(downame, f"{voice_path}/{self.name.value}")
+			extract_package.extract_zip(downame, f"{voice_path}/voices/{self.name.value}")
 			# We need to check voice.data.
-			if not helpers.detect_hts_models(f"{voice_path}/{self.name.value}/*"):
+			if not helpers.detect_hts_models(f"{voice_path}/voices/{self.name.value}/*"):
 				await interaction.channel.send(lan.translate(lang, "El paquete que subiste no tiene el archivo de voz para funcionar."))
 				return
 			else:
