@@ -94,7 +94,6 @@ async def on_ready():
 async def send_alert_to_everyone(client: discord.Client, message: str):
 	for server in client.guilds:
 		for channel in server.text_channels:
-			print(f"Trying to send message to {channel} in server {server}...")
 			try:
 				await channel.send(message)
 			except Exception:
@@ -137,7 +136,6 @@ async def on_message(message):
 	if isinstance(message.channel, discord.TextChannel):
 		autotts_channel = message.channel.name
 	else:
-		print(message.channel)
 		autotts_channel = None
 	autotts_user = message.author.name
 	try:
@@ -309,7 +307,6 @@ async def on_message(message):
 
 @client.tree.command(description=lan.translate(lang, "Obtiene una lista de voces del sintetizador en específico."))
 async def list(interaction: discord.Interaction, synthesizer: Literal ["piper", "RHVoice"]):
-	print(interaction.user)
 	if synthesizer == "piper":
 		await interaction.response.send_message(f'{lan.translate(lang, "Aquí está la lista de voces")}:', file = discord.File("list.md"), ephemeral=True)
 	elif synthesizer == "RHVoice":
@@ -324,7 +321,6 @@ async def search(interaction: discord.Interaction, term: str):
 		lan, lang, lista, term
 	)
 	if not resultados == -1:
-		print(resultados)
 		await interaction.response.send_message(f'{lan.translate(lang, "Resultados de la búsqueda para")} {term}:\n{resultados}', ephemeral=True)
 	else:
 		await interaction.response.send_message(f'{lan.translate(lang, "Lo siento, pero no hay una voz que se llame")} {term}.\n{lan.translate(lang, "Asegúrate de que tu término es correcto. Si necesitas esta voz, puedes proporcionarnos el dataset o el paquete exportado para entrenarlo o agregarlo.")}', ephemeral=True)
