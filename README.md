@@ -21,7 +21,7 @@ The bot, outside piper, supports these following speech synthesizers. Each one h
 1. Clone the repo:
 
 ```
-https://github.com/rmcpantoja/world-TTS
+git clone https://github.com/rmcpantoja/world-TTS
 ```
 
 2. Optionally, create a virtual env for this project.
@@ -87,5 +87,5 @@ These commands can be typed in any chat, even in a private message to the bot. I
 ## Acknowledgements
 
 * [Discord.py](https://github.com/Rapptz/discord.py), the head of this project.
-* [Piper, a fast an local, neurol Text-To-Speech](https://github.com/rhasspy/piper), also the [NVDA driver](https://github.com/mush42/sonata-nvda) for piperTTS support.
+* [Piper, a fast an local, neural Text-To-Speech](https://github.com/rhasspy/piper), also the [NVDA driver](https://github.com/mush42/sonata-nvda) for piperTTS support.
 * [RHVoice Python binding](https://github.com/Aculeasis/rhvoice-proxy), and the [official project](https://github.com/RHVoice/RHVoice) for the RHVoiceTTS support.
